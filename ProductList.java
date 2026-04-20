@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// 商品一覧の表示を担当するクラス
+
 public class ProductList {
     public void ShowProductList() {
         ArrayList<Product> ProductList = ProductCsv.LoadCsv(new String[] { "products.csv" });
