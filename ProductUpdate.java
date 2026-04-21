@@ -4,7 +4,7 @@ import java.util.Scanner;
 // 在庫数の更新を担当するクラス
 
 public class ProductUpdate {
-    public void UpdateProduct(ArrayList<Product> ProductList) {
+    public void updateProduct(ArrayList<Product> ProductList) {
         // 在庫数の更新処理を実装する
         System.out.println("在庫数を更新する商品コードを入力してください >>");
         Scanner sc = new Scanner(System.in);
@@ -13,19 +13,19 @@ public class ProductUpdate {
             String UpdateId = sc.nextLine();
             String flag = null;
             for (Product product : ProductList) {
-                if (product.ProductId.equals(UpdateId)) {
+                if (product.productId.equals(UpdateId)) {
                     flag = "true";
                     // 2. 更新する在庫数を入力する
                     System.out.println("更新する在庫数を入力してください >>");
                     int newCount = sc.nextInt();
                     // 3. 商品の在庫数を更新・保存する
-                    product.ProductCount = newCount;
+                    product.productCount = newCount;
                     System.out.println();
-                    new ProductCsv().SaveCsv(ProductList);
+                    new ProductCsv().saveCsv(ProductList);
                     System.out.println("在庫数が更新されました。");
                     // 4. 更新後の在庫数を表示する
-                    new ProductList().ShowProductList(ProductList);
-                    new StockZeroList().showZeroList(ProductList);
+                    new ProductDisplay().ShowProductList(ProductList);
+                    new LowStockDisplay().showLowStockList(ProductList);
                     break;
                 }
             }

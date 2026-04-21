@@ -7,36 +7,36 @@ import java.util.ArrayList;
 // CSVファイルの読み込みと保存を担当するクラス
 
 public class ProductCsv {
-    public ArrayList<Product> LoadCsv() {
-        ArrayList<Product> ProductList = new ArrayList<>();
+    public ArrayList<Product> loadCsv() {
+        ArrayList<Product> productsList = new ArrayList<>();
         // CSVファイルから商品データを読み込む
         try (BufferedReader reader = new BufferedReader(new java.io.FileReader("products.csv"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");
                 if (fields.length == 5) {
-                    String ProductId = fields[0];
-                    String ProductName = fields[1];
-                    String ProductCategory = fields[2];
-                    int ProductCount = Integer.parseInt(fields[3]);
-                    int ProductMinCount = Integer.parseInt(fields[4]);
-                    Product p = new Product(ProductId, ProductName, ProductCategory, ProductCount, ProductMinCount);
-                    ProductList.add(p);
+                    String productId = fields[0];
+                    String productName = fields[1];
+                    String productCategory = fields[2];
+                    int productCount = Integer.parseInt(fields[3]);
+                    int productMinCount = Integer.parseInt(fields[4]);
+                    Product p = new Product(productId, productName, productCategory, productCount, productMinCount);
+                    productsList.add(p);
                 }
             }
-            return ProductList;
+            return productsList;
         } catch (IOException e) {
             System.out.println("CSVファイルの読み込みに失敗しました。");
-            return ProductList;
+            return productsList;
         }
     }
 
-    public void SaveCsv(ArrayList<Product> ProductList) {
+    public void saveCsv(ArrayList<Product> productsList) {
         // CSVファイルへの保存処理を実装する
         try (FileWriter writer = new FileWriter("products.csv", false)) {
-            for (Product p : ProductList) {
-                String line = p.ProductId + "," + p.ProductName + "," + p.ProductCategory + "," + p.ProductCount + ","
-                        + p.ProductMinCount;
+            for (Product p : productsList) {
+                String line = p.productId + "," + p.productName + "," + p.productCategory + "," + p.productCount + ","
+                        + p.productMinCount;
                 writer.write(line + "\n");
             }
             System.out.println();
