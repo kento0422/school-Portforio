@@ -13,10 +13,10 @@ import java.util.Scanner;
  */
 
 public class MainScreen {
-    public static void main() {
+    public static void main(String[] args) {
         System.out.println("在庫管理システムへようこそ！");
         // 商品一覧の表示
-        ArrayList<Product> ProductList = new ProductCsv().LoadCsv(new String[] { "products.csv" });
+        ArrayList<Product> ProductList = new ProductCsv().LoadCsv();
         new ProductList().ShowProductList(ProductList);
         // 在庫不足一覧の表示
         new StockZeroList().showZeroList(ProductList);
@@ -40,7 +40,7 @@ public class MainScreen {
                     }
                     case 3 -> {
                         // 商品削除の処理を実行する
-                        new ProductDalete().DeleteProduct(ProductList);
+                        new ProductDelete().DeleteProduct(ProductList);
                     }
                     case 0 -> {
                         // 作業終了の処理を実行する

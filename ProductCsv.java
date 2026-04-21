@@ -7,7 +7,7 @@ import java.util.ArrayList;
 // CSVファイルの読み込みと保存を担当するクラス
 
 public class ProductCsv {
-    public ArrayList<Product> LoadCsv(String[] args) {
+    public ArrayList<Product> LoadCsv() {
         ArrayList<Product> ProductList = new ArrayList<>();
         // CSVファイルから商品データを読み込む
         try (BufferedReader reader = new BufferedReader(new java.io.FileReader("products.csv"))) {
@@ -24,7 +24,6 @@ public class ProductCsv {
                     ProductList.add(p);
                 }
             }
-            reader.close();
             return ProductList;
         } catch (IOException e) {
             System.out.println("CSVファイルの読み込みに失敗しました。");

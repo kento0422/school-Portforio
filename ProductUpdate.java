@@ -21,8 +21,8 @@ public class ProductUpdate {
                     // 3. 商品の在庫数を更新・保存する
                     product.ProductCount = newCount;
                     System.out.println();
-                    System.out.println("在庫数が更新されました。");
                     new ProductCsv().SaveCsv(ProductList);
+                    System.out.println("在庫数が更新されました。");
                     // 4. 更新後の在庫数を表示する
                     new ProductList().ShowProductList(ProductList);
                     new StockZeroList().showZeroList(ProductList);
