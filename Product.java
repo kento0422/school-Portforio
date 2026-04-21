@@ -8,11 +8,11 @@
 */
 
 public class Product {
-    String productId;
-    String productName;
-    String productCategory;
-    int productCount;
-    int productMinCount;
+    private String productId;
+    private String productName;
+    private String productCategory;
+    private int productCount;
+    private int productMinCount;
 
     public Product(String productId, String productName, String productCategory, int productCount,
             int productMinCount) {
@@ -22,4 +22,26 @@ public class Product {
         this.productCount = productCount;
         this.productMinCount = productMinCount;
     }
+
+    // Getterメソッド
+    public String getProductId() {
+        return productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public String getProductCategory() {
+        return productCategory;
+    }
+
+    public int getProductCount() {
+        return productCount;
+    }
+
+    public int getProductMinCount() {
+        return productMinCount;
+    }
+
 }
