@@ -7,7 +7,7 @@ import java.util.ArrayList;
 // CSVファイルの読み込みと保存を担当するクラス
 
 public class ProductCsv {
-    public static ArrayList<Product> LoadCsv(String[] args) {
+    public ArrayList<Product> LoadCsv(String[] args) {
         ArrayList<Product> ProductList = new ArrayList<>();
         // CSVファイルから商品データを読み込む
         try (BufferedReader reader = new BufferedReader(new java.io.FileReader("products.csv"))) {
@@ -32,17 +32,20 @@ public class ProductCsv {
         }
     }
 
-    public static void SaveCsv(ArrayList<Product> ProductList) {
+    public void SaveCsv(ArrayList<Product> ProductList) {
         // CSVファイルへの保存処理を実装する
-        try (FileWriter writer = new FileWriter("products.csv", true)) {
+        try (FileWriter writer = new FileWriter("products.csv", false)) {
             for (Product p : ProductList) {
                 String line = p.ProductId + "," + p.ProductName + "," + p.ProductCategory + "," + p.ProductCount + ","
                         + p.ProductMinCount;
                 writer.write(line + "\n");
             }
+            System.out.println();
             System.out.println("CSVファイルへの保存が完了しました。");
         } catch (IOException e) {
+            System.out.println();
             System.out.println("CSVファイルへの保存に失敗しました。");
         }
+        System.out.println();
     }
 }

@@ -1,6 +1,7 @@
-001,apple,fruit,10,0
-002,banana,fruit,15,0
+001,apple,fruit,10,5
+002,banana,fruit,25,5
 003,chocolate,suits,10,5
-004,dog,animal,2,0
-005,egg,foods,36,12
+004,donut,suits,10,5
+005,egg,daily,36,12
 006,fish,fish,20,0
+007,grape,fruit,15,5
