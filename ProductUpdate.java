@@ -24,7 +24,7 @@ public class ProductUpdate {
                     new ProductCsv().saveCsv(ProductList);
                     System.out.println("在庫数が更新されました。");
                     // 4. 更新後の在庫数を表示する
-                    new ProductDisplay().ShowProductList(ProductList);
+                    new ProductDisplay().showProductList(ProductList);
                     new LowStockDisplay().showLowStockList(ProductList);
                     break;
                 }

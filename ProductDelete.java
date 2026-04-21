@@ -5,7 +5,7 @@ import java.util.Scanner;
 // 商品削除の処理を担当するクラス
 
 public class ProductDelete {
-    public void DeleteProduct(ArrayList<Product> ProductList) {
+    public void deleteProduct(ArrayList<Product> ProductList) {
         Scanner sc = new Scanner(System.in);
         try {
             // 1. 商品コードを入力して、該当する商品を検索する
@@ -23,7 +23,7 @@ public class ProductDelete {
                     // 3. 商品の削除後、CSVファイルを更新する
                     new ProductCsv().saveCsv(ProductList);
                     // 4. 削除後の商品一覧を表示する
-                    new ProductDisplay().ShowProductList(ProductList);
+                    new ProductDisplay().showProductList(ProductList);
                     flag = "true";
                     break;
                 }

@@ -17,7 +17,7 @@ public class MainScreen {
         System.out.println("在庫管理システムへようこそ！");
         // 商品一覧の表示
         ArrayList<Product> productsList = new ProductCsv().loadCsv();
-        new ProductDisplay().ShowProductList(productsList);
+        new ProductDisplay().showProductList(productsList);
         // 在庫不足一覧の表示
         new LowStockDisplay().showLowStockList(productsList);
         // 次の作業の選択

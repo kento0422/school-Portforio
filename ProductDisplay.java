@@ -3,7 +3,7 @@ import java.util.ArrayList;
 // 商品一覧の表示を担当するクラス
 
 public class ProductDisplay {
-    public void ShowProductList(ArrayList<Product> productsList) {
+    public void showProductList(ArrayList<Product> productsList) {
         System.out.println("【商品一覧】");
         System.out.printf("%-8s %-15s %-12s %-8s %-10s%n",
                 "Code", "Name", "Category", "Stock", "Min-Stock");

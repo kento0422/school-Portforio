@@ -8,18 +8,18 @@
 */
 
 public class Product {
-    String ProductId;
-    String ProductName;
-    String ProductCategory;
-    int ProductCount;
-    int ProductMinCount;
+    String productId;
+    String productName;
+    String productCategory;
+    int productCount;
+    int productMinCount;
 
-    public Product(String ProductId, String ProductName, String ProductCategory, int ProductCount,
-            int ProductMinCount) {
-        this.ProductId = ProductId;
-        this.ProductName = ProductName;
-        this.ProductCategory = ProductCategory;
-        this.ProductCount = ProductCount;
-        this.ProductMinCount = ProductMinCount;
+    public Product(String productId, String productName, String productCategory, int productCount,
+            int productMinCount) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.productCount = productCount;
+        this.productMinCount = productMinCount;
     }
 }

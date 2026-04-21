@@ -27,7 +27,7 @@ public class ProductAdd {
             // 3. 商品の追加後、CSVファイルを更新する
             new ProductCsv().saveCsv(ProductList);
             // 4. 追加後の商品一覧を表示する
-            new ProductDisplay().ShowProductList(ProductList);
+            new ProductDisplay().showProductList(ProductList);
         } catch (Exception e) {
             System.out.println("入力に誤りがあります。もう一度やり直してください。");
         }
