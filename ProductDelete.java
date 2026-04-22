@@ -16,7 +16,7 @@ public class ProductDelete {
             Iterator<Product> iterator = ProductList.iterator();
             while (iterator.hasNext()) {
                 Product product = iterator.next();
-                if (product.productId.equals(deleteId)) {
+                if (product.getProductId().equals(deleteId)) {
                     iterator.remove();
                     System.out.println();
                     System.out.println("商品が削除されました。");

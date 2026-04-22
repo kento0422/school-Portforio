@@ -35,8 +35,9 @@ public class ProductCsv {
         // CSVファイルへの保存処理を実装する
         try (FileWriter writer = new FileWriter("products.csv", false)) {
             for (Product p : productsList) {
-                String line = p.productId + "," + p.productName + "," + p.productCategory + "," + p.productCount + ","
-                        + p.productMinCount;
+                String line = p.getProductId() + "," + p.getProductName() + "," + p.getProductCategory() + ","
+                        + p.getProductCount() + ","
+                        + p.getProductMinCount();
                 writer.write(line + "\n");
             }
             System.out.println();

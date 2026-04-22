@@ -13,13 +13,13 @@ public class ProductUpdate {
             String UpdateId = sc.nextLine();
             String flag = null;
             for (Product product : ProductList) {
-                if (product.productId.equals(UpdateId)) {
+                if (product.getProductId().equals(UpdateId)) {
                     flag = "true";
                     // 2. 更新する在庫数を入力する
                     System.out.println("更新する在庫数を入力してください >>");
                     int newCount = sc.nextInt();
                     // 3. 商品の在庫数を更新・保存する
-                    product.productCount = newCount;
+                    product.setProductCount(newCount);
                     System.out.println();
                     new ProductCsv().saveCsv(ProductList);
                     System.out.println("在庫数が更新されました。");

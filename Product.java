@@ -8,11 +8,11 @@
 */
 
 public class Product {
-    private String productId;
-    private String productName;
-    private String productCategory;
+    private final String productId;
+    private final String productName;
+    private final String productCategory;
     private int productCount;
-    private int productMinCount;
+    private final int productMinCount;
 
     public Product(String productId, String productName, String productCategory, int productCount,
             int productMinCount) {
@@ -44,4 +44,8 @@ public class Product {
         return productMinCount;
     }
 
+    // Setterメソッド
+    public void setProductCount(int productCount) {
+        this.productCount = productCount;
+    }
 }
