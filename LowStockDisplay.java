@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class LowStockDisplay {
     public void showLowStockList(ArrayList<Product> ProductList) {
-        System.out.println("【在庫不足一覧】");
+        System.out.println("【在庫不足リスト】");
         System.out.printf("%-8s %-15s %-12s %-8s %-10s%n",
                 "Code", "Name", "Category", "Stock", "Min-Stock");
         System.out.println("--------------------------------------------------");
